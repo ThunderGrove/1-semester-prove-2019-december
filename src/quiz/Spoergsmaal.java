@@ -2,7 +2,7 @@ package quiz;
 
 import java.util.ArrayList;
 
-public class Spoergsmaal{
+public class Spoergsmaal implements Translatable{
     private String tekst;
     private int value=0;//Number of points the question is worth.
     private ArrayList<Svar>svarmuligheder=new ArrayList<>();
@@ -53,5 +53,14 @@ public class Spoergsmaal{
 
     public void setRigtigSvarId(int rigtigSvarId){
         this.rigtigSvarId=rigtigSvarId;
+    }
+
+    public String translate(Language language){
+        if(language.equals("Danish")){
+            return "Oversættelse er ikke muligt endnu";
+        }else if(language.equals("English")){
+            return "Translation is not available yet";
+        }
+        return "Translation is not available yet";
     }
 }

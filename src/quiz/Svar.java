@@ -1,6 +1,6 @@
 package quiz;
 
-public class Svar{
+public class Svar implements Translatable{
     private String tekst;
 
     public Svar(String tekst){
@@ -21,5 +21,14 @@ public class Svar{
 
     public String getTekst(){
         return tekst;
+    }
+
+    public String translate(Language language){
+        if(language.equals("Danish")){
+            return "Oversættelse er ikke muligt endnu";
+        }else if(language.equals("English")){
+            return "Translation is not available yet";
+        }
+        return "Translation is not available yet";
     }
 }
