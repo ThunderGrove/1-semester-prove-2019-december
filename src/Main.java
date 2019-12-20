@@ -7,7 +7,7 @@
 
 public class Main{
     public String hello(String navn) {
-        if(navn.isEmpty()){
+        if(navn.isEmpty()){//There are multiple ways to check if a String is empty but "isEmpty" is the best as the same method/function name is used in other programming languages.
             return "Hello World!";
         }
         return "Hello "+navn+"!";

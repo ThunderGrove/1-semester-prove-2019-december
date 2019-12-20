@@ -30,6 +30,8 @@ public class Person{
 
     // TODO Vis eksempler på typecasting
     public Date stringToDate(String string)throws ParseException{
+        //The below typecasting is one of the most common typecasting as the transferring
+        //of the date and/or time between systems happens in Strings e.g. two servers sending data between each other.
         opdateretDato=new SimpleDateFormat("yyyy/MM/dd hh:mm:ss").parse(string);
         return opdateretDato;
     }

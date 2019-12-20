@@ -19,15 +19,13 @@ public class Quickmaths{
 
     public static void start(){
         Scanner input=new Scanner(System.in);
-        int stage=0;
-        int a=0;
-        int b=0;
+        int stage=0,a=0,b=0;
 
         System.out.print("Indtast A: ");
 
         while(input.hasNext()){
             String cmd=input.next();
-            if(cmd.equals("exit")||cmd.equals("Exit")||cmd.equals("EXIT")){
+            if(cmd.equals("exit")||cmd.equals("Exit")||cmd.equals("EXIT")){//A nice way to exit the loop, and handle all common ways that someone would type exit.
                 break;
             }
             if(stage==0){
@@ -40,6 +38,7 @@ public class Quickmaths{
                 System.out.println("Gennemsnit: "+gennemsnit(a,b));
                 System.out.println("--------------");
                 System.out.print("Indtast A: ");
+                stage--;
             }
         }
     }

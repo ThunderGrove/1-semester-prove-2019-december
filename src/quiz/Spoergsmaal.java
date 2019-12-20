@@ -56,11 +56,17 @@ public class Spoergsmaal implements Translatable{
     }
 
     public String translate(Language language){
-        if(language.equals("Danish")){
-            return "Oversættelse er ikke muligt endnu";
-        }else if(language.equals("English")){
-            return "Translation is not available yet";
+        switch(language){
+            //Break is not in this switch as return also works as a Break.
+            //Having multiple returns are normally seen bad as it is harder
+            //debug but doing it this way creates less peak ram usage when
+            //working with strings.
+            case Danish:
+                return "Oversættelse er ikke muligt endnu";
+            case English:
+                return "Translation is not available yet";
+            default:
+                return "Translation is not available yet";
         }
-        return "Translation is not available yet";
     }
 }
