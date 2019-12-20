@@ -17,7 +17,7 @@ public class Quiz{
         muligeSvar.add(new Svar("3"));
 
         spList.add(new Spoergsmaal(
-                "Hvor mange typer Typer kan en Pokémon max have?",
+                "Hvor mange typer kan en Pokémon max have?",
                 10,
                 muligeSvar,
                 2
