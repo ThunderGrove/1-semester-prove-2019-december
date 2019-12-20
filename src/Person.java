@@ -1,3 +1,9 @@
+import java.sql.Time;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+
 /**
  * Developed by András Ács (acsandras@gmail.com)
  * Zealand / www.zealand.dk
@@ -5,36 +11,40 @@
  * 18/12/2019
  */
 
-public class Person {
-
+public class Person{
     // TODO Ret nedenstående datatyper
     String navn; // Test Testesen
-    String alder; // 18
+    short alder; // 18
     String by; // Næstved
-    String postNummer; // 4700
+    short postNummer; // 4700
     String vej; // Femøvej
     String husnummer; // 3B
     String nationalitet; // Dansk
-    String fritidsStringeresser; // Snitning, LOL, strikke
-    String smarthomeDevices; // Xbox, 3 Smartlamper, Køleskab m.m.
-    String hojde; // 1.56 m
-    String vaegt;  // 76 kg
-    String karaktergennemsnit; // 5.33
-    String eksamensKarakterer; // 7, 12, -3, 4, 2, 10
-    String opdateretDato; // Sun Jan 08 00:00:00 CET 1978
+    ArrayList<String>fritidsStringeresser=new ArrayList<>(); // Snitning, LOL, strikke
+    ArrayList<String>smarthomeDevices=new ArrayList<>(); // Xbox, 3 Smartlamper, Køleskab m.m.
+    double hojde; // 1.56 m
+    double vaegt; // 76 kg
+    double karaktergennemsnit; // 5.33
+    double eksamensKarakterer; // 7, 12, -3, 4, 2, 10
+    Date opdateretDato; // Sun Jan 08 00:00:00 CET 1978
 
     // TODO Vis eksempler på typecasting
+    public Date stringToDate(String string)throws ParseException{
+        opdateretDato=new SimpleDateFormat("yyyy/MM/dd hh:mm:ss").parse(string);
+        return opdateretDato;
+    }
+
     @Override
-    public String toString() {
-        return "Navn: " + navn + "By" + by;
+    public String toString(){
+        return"Navn: "+navn+" By: "+by;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)throws ParseException{
+        Person person=new Person();
+        person.navn="Test Testesen";
+        person.by="Næstved";
+        System.out.println(person.toString());
 
-        Person person = new Person();
-        person.navn = "Test Testesen";
-        person.by = "Næstved";
-        System.out.println();
+        System.out.println(person.stringToDate("2019/12/31 23:59:59"));
     }
-
 }
