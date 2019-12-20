@@ -1,16 +1,12 @@
 import junit.framework.TestCase;
 
-public class MainTest extends TestCase {
+public class MainTest extends TestCase{
 
-
-    public void testHelloAndras() {
-
+    public void testHelloAndras(){
         Main m = new Main();
 
         assertEquals("Hello András!", m.hello("András"));
-
     }
-
 
     public void testHelloEmptyString() {
 

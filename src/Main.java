@@ -5,15 +5,11 @@
  * 13/12/2019
  */
 
-public class Main {
-
-    // TODO Din kode her
-
+public class Main{
     public String hello(String navn) {
         if(navn.isEmpty()){
             return "Hello World!";
         }
         return "Hello "+navn+"!";
     }
-
 }
