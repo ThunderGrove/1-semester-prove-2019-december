@@ -20,7 +20,8 @@ public class Quickmaths{
     public static void start(){
         Scanner input=new Scanner(System.in);
         int stage=0;
-        int a=0,b=0;
+        int a=0;
+        int b=0;
 
         System.out.print("Indtast A: ");
 
