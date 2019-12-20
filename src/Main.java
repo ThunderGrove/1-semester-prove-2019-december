@@ -10,7 +10,10 @@ public class Main {
     // TODO Din kode her
 
     public String hello(String navn) {
-        return "";
+        if(navn.isEmpty()){
+            return "Hello World!";
+        }
+        return "Hello "+navn+"!";
     }
 
 }
